@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+dx	main.f90	/^double precision x,dx,/;"	v	program:main
+err	main.f90	/^double precision err,/;"	v	program:main
+err1	main.f90	/^double precision err,err1$/;"	v	program:main
+exact	main.f90	/^double precision exact$/;"	v	program:main
+f	coefficient.py	/^f=open(r'b.dat','w')$/;"	v
+f	main.f90	/^double precision y(n_fu/;"	v	program:main
+f_derivative	f_derivative.f90	/^subroutine f_derivative(/;"	s
+i	main.f90	/^in/;"	v	program:main
+ix	main.f90	/^integer i,j,k,ix,/;"	v	program:main
+j	main.f90	/^integer i,j,/;"	v	program:main
+k	main.f90	/^integer i,j,k,/;"	v	program:main
+main	main.f90	/^program main$/;"	p
+n_fun	main.f90	/^integer n_fun,/;"	v	program:main
+n_method	main.f90	/^integer n_fun,n_method$/;"	v	program:main
+nx	main.f90	/^integer i,j,k,ix,nx$/;"	v	program:main
+per_k	main.f90	/^double precision y(n_fun),per_k(/;"	v	program:main
+pertur	NP.f90	/^subroutine pertur(/;"	s
+s	coefficient.py	/^     s='yp('+str(i+1)+',1)='+str(z1)  $/;"	v
+s	coefficient.py	/^     s='yp('+str(i+1)+',2)='+str(z2)  $/;"	v
+s	coefficient.py	/^     s='yp('+str(i+1)+',3)='+str(z3)  $/;"	v
+x	coefficient.py	/^x =symbols("x",real=True)$/;"	v
+x	main.f90	/^double precision x,/;"	v	program:main
+xx	main.f90	/^double precision x,dx,xx$/;"	v	program:main
+y	main.f90	/^double precision y(/;"	v	program:main
+y1	coefficient.py	/^y1 =symbols("y1",cls=Function)$/;"	v
+y2	coefficient.py	/^y2 =symbols("y2",cls=Function)$/;"	v
+y3	coefficient.py	/^y3 =symbols("y3",cls=Function)$/;"	v
+yp11	coefficient.py	/^yp11 =symbols("yp11",cls=Function)$/;"	v
+yp12	coefficient.py	/^yp12 =symbols("yp12",cls=Function)$/;"	v
+yp13	coefficient.py	/^yp13 =symbols("yp13",cls=Function)$/;"	v
+z1	coefficient.py	/^     z1=diff( -4.0e-2*y1(x)+1.0e4*y2(x)*y3(x) ,x,i)$/;"	v
+z2	coefficient.py	/^     z2=diff( 4.0e-2*y1(x)-1.0e4*y2(x)*y3(x)-3.0e7*y2(x)**2 ,x,i)$/;"	v
+z3	coefficient.py	/^     z3=diff( 3.0e7*y2(x)**2 ,x,i)$/;"	v

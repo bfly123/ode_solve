@@ -86,12 +86,12 @@ double precision g,g1,g2,g3,g4,g5,g6,g7
 double precision y1,y2,y3,y4,y5,y6,y7
 double precision c1,c2,c3,c4,c5
 double precision tmp
-double precision ss,dq,dx,x,ld
+double precision ss,dq,dx,x,ld,fy
 integer method
 !*****************F******************
 !write(*,*) G
 
-method=71
+method=31
 
 g=10-(10+x)*exp(-x)
 g1=(9+x)*exp(-x)
@@ -111,6 +111,8 @@ g7=(3+x)*exp(-x)
  y5=g5+ld**5*tmp
  y6=g6+ld**6*tmp
  y7=g7+ld**7*tmp
+
+ fy=y2/y1
 
  a1=-y2/2/y1
  a2=-y3/6/y1-a1*y2/2/y1
@@ -136,18 +138,18 @@ per_k=1+a1*dx+a2*dx**2+a3*dx**3+a4*dx**4+a5*dx**5+a6*dx**6
 case(31)
 !**************3rdTransform******************
 
-b2=a2/(1+a1/ld)
-b1=a1-a2/(a1+ld)
-per_k=(1+b1*dx +b2*dx**2)/(1-b2/ld*dx)
+b2=a2/(1+a1/fy)
+b1=a1-a2/(a1+fy)
+per_k=(1+b1*dx +b2*dx**2)/(1-b2/fy*dx)
 
 case(41)
 !***********4thTransform********************
 b1=-5*a1
-b2=a2-6*a1**2-(a3-6*a1*a2)/(ld+a1)
-b3=(a3-6*a1*a2)/(1+a1/ld)
+b2=a2-6*a1**2-(a3-6*a1*a2)/(fy+a1)
+b3=(a3-6*a1*a2)/(1+a1/fy)
 
 c1=-6*a1
-c2=-b3/ld
+c2=-b3/fy
 
 per_k=(1+b1*dx +b2*dx**2+b3*dx**3)/(1+c1*dx+c2*dx**2) 
 
@@ -158,8 +160,8 @@ c2=-144*a2
 
 b1=a1+c1
 b2=a2+a1*c1+c2
-b4=(a4+a3*c1+a2*c2)/(1+a1/ld)
-c3=-b4/ld
+b4=(a4+a3*c1+a2*c2)/(1+a1/fy)
+c3=-b4/fy
 b3=a3+a2*c1+a1*c2+c3
 
 per_k=(1+b1*dx +b2*dx**2+b3*dx**3+b4*dx**4)/(1+c1*dx+c2*dx**2+c3*dx**3) 
@@ -172,8 +174,8 @@ c3=600*a3
 b1=a1+c1
 b2=a2+c1*a1+c2
 b3=a3+a2*c1+a1*c2+c3
-b5=(a5+a4*c1+a3*c2+a2*c3)/(1+a1/ld)
-c4=-b5/ld
+b5=(a5+a4*c1+a3*c2+a2*c3)/(1+a1/fy)
+c4=-b5/fy
 b4=a4+a3*c1+a2*c2+a1*c3+c4
 
 per_k=(1+b1*dx +b2*dx**2+b3*dx**3+b4*dx**4+b5*dx**5)/(1+c1*dx+c2*dx**2+c3*dx**3+c4*dx**4) 
@@ -188,8 +190,8 @@ b1=a1+c1
 b2=a2+c1*a1+c2
 b3=a3+a2*c1+a1*c2+c3
 b4=a4+a3*c1+a2*c2+a1*c3+c4
-b6=(a6+a5*c1+a4*c2+a3*c3+a2*c4)/(1+a1/ld)
-c5=-b6/ld
+b6=(a6+a5*c1+a4*c2+a3*c3+a2*c4)/(1+a1/fy)
+c5=-b6/fy
 b5=a5+a4*c1+a3*c2+a2*c3+a1*c4+c5
 
 per_k=(1+b1*dx +b2*dx**2+b3*dx**3+b4*dx**4+b5*dx**5+b6*dx**6)/(1+c1*dx+c2*dx**2+c3*dx**3+c4*dx**4+c5*dx**5) 

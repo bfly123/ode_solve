@@ -3,50 +3,64 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 Bin	makefile	/^Bin = main.exe$/;"	m
 F	global.f90	/^double precision,allocatable::F(/;"	v	module:global_per
 F90	makefile	/^F90 = gfortran -openmp$/;"	m
 G	global.f90	/^double precision,allocatable::G(/;"	v	module:global_per
 Objects	makefile	/^Objects = global.o van_der_pol_per.o pertur.o pertur_G.o$/;"	m
-dt	van_der_pol_per.f90	/^double precision t,dt,/;"	v	program:main
+dx	VDPOL.f90	/^double precision x,dx,/;"	v	program:main
 dx	seinfeld.f90	/^double precision x,dx,/;"	v	program:main
+err	VDPOL.f90	/^double precision err,/;"	v	program:main
 err	seinfeld.f90	/^double precision err,/;"	v	program:main
+err1	VDPOL.f90	/^double precision err,err1$/;"	v	program:main
 err1	seinfeld.f90	/^double precision err,err1$/;"	v	program:main
+exact	VDPOL.f90	/^double precision ld,exact$/;"	v	program:main
 exact	seinfeld.f90	/^double precision ld,exact,/;"	v	program:main
+f	VDPOL.f90	/^double precision y,z,f,/;"	v	program:main
+f	coeffient.py	/^f=open(r'a.txt','w')$/;"	v
 f	seinfeld.f90	/^double precision y,y0,f,/;"	v	program:main
 g	seinfeld.f90	/^double precision y,y0,f,g,/;"	v	program:main
 global_per	global.f90	/^module global_per$/;"	m
+i	VDPOL.f90	/^in/;"	v	program:main
 i	seinfeld.f90	/^in/;"	v	program:main
-i	van_der_pol_per.f90	/^in/;"	v	program:main
-it	van_der_pol_per.f90	/^integer i,j,k,it,/;"	v	program:main
+ix	VDPOL.f90	/^integer i,j,k,ix,/;"	v	program:main
 ix	seinfeld.f90	/^integer i,j,k,ix,/;"	v	program:main
+j	VDPOL.f90	/^integer i,j,/;"	v	program:main
 j	seinfeld.f90	/^integer i,j,/;"	v	program:main
-j	van_der_pol_per.f90	/^integer i,j,/;"	v	program:main
+k	VDPOL.f90	/^integer i,j,k,/;"	v	program:main
 k	seinfeld.f90	/^integer i,j,k,/;"	v	program:main
-k	van_der_pol_per.f90	/^integer i,j,k,/;"	v	program:main
+ld	VDPOL.f90	/^double precision ld,/;"	v	program:main
 ld	seinfeld.f90	/^double precision ld,/;"	v	program:main
 lde	seinfeld.f90	/^double precision ld,exact,lde$/;"	v	program:main
+main	VDPOL.f90	/^program main$/;"	p
 main	seinfeld.f90	/^program main$/;"	p
-main	van_der_pol_per.f90	/^program main$/;"	p
 nf	global.f90	/^integer                       nf /;"	v	module:global_per
-nt	van_der_pol_per.f90	/^inte/;"	v	program:main
 nt2	seinfeld.f90	/^integer i,j,k,ix,nx,nt2$/;"	v	program:main
-nt2	van_der_pol_per.f90	/^integer i,j,k,it,nt,nt2$/;"	v	program:main
+nx	VDPOL.f90	/^integer i,j,k,ix,nx$/;"	v	program:main
 nx	seinfeld.f90	/^integer i,j,k,ix,nx,/;"	v	program:main
+per_k	VDPOL.f90	/^double precision y,z,f,per_k$/;"	v	program:main
 per_k	global.f90	/^double precision,allocatable::per_k(/;"	v	module:global_per
 per_k	seinfeld.f90	/^double precision y,y0,f,g,per_k$/;"	v	program:main
+pertur	VDPOL.f90	/^subroutine pertur(/;"	s
 pertur	pertur.f90	/^subroutine pertur(/;"	s
 pertur	seinfeld.f90	/^subroutine pertur(/;"	s
 pertur_G	pertur_G.f90	/^subroutine pertur_G(/;"	s
+s	coeffient.py	/^    s='z'+str(a)+'='+str(zn)$/;"	v
+s	coeffient.py	/^    s='z'+str(a)+'=y'+str(a-1)$/;"	v
 source	makefile	/^source = global.f90 van_der_pol_per.f90 pertur.f90 pertur_G.f90$/;"	m
-sub_F	van_der_pol_per.f90	/^subroutine sub_F(/;"	s
-t	van_der_pol_per.f90	/^double precision t,/;"	v	program:main
-tt	van_der_pol_per.f90	/^double precision t,dt,tt$/;"	v	program:main
+x	VDPOL.f90	/^double precision x,/;"	v	program:main
+x	coeffient.py	/^x=symbols('x')$/;"	v
 x	global.f90	/^double precision              x$/;"	v	module:global_per
 x	seinfeld.f90	/^double precision x,/;"	v	program:main
+xx	VDPOL.f90	/^double precision x,dx,xx$/;"	v	program:main
 xx	seinfeld.f90	/^double precision x,dx,xx$/;"	v	program:main
+y	VDPOL.f90	/^double precision y,/;"	v	program:main
+y	coeffient.py	/^y=symbols('y',cls=Function)$/;"	v
 y	global.f90	/^double precision,allocatable::y(/;"	v	module:global_per
 y	seinfeld.f90	/^double precision y,/;"	v	program:main
 y0	global.f90	/^double precision,allocatable::y0(/;"	v	module:global_per
 y0	seinfeld.f90	/^double precision y,y0,/;"	v	program:main
+z	VDPOL.f90	/^double precision y,z,/;"	v	program:main
+z	coeffient.py	/^z=symbols('z',cls=Function)$/;"	v
+zn	coeffient.py	/^    zn=diff((1-y(x)**2)*z(x)-y(x),x,a)$/;"	v
